@@ -174,7 +174,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     origins: [
         {
             originId: contentBucket.arn,
-            domainName: contentBucket.websiteEndpoint,
+            domainName: contentBucket.bucketDomainName,
             s3OriginConfig: {
                 originAccessIdentity: originAccessIdentity.cloudfrontAccessIdentityPath,
             },
